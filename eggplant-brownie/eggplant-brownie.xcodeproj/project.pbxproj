@@ -24,6 +24,7 @@
 		222EBA412444C8C100C0A9A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222EBA442444C8C100C0A9A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		222EBA462444C8C100C0A9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228577EA244505CD00458AC1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "../../../../../Library/Autosave Information/MyPlayground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 				222EBA3C2444C8C100C0A9A1 /* ViewController.swift */,
 				222EBA3E2444C8C100C0A9A1 /* Main.storyboard */,
 				222EBA412444C8C100C0A9A1 /* Assets.xcassets */,
+				228577EA244505CD00458AC1 /* MyPlayground.playground */,
 				222EBA432444C8C100C0A9A1 /* LaunchScreen.storyboard */,
 				222EBA462444C8C100C0A9A1 /* Info.plist */,
 			);
