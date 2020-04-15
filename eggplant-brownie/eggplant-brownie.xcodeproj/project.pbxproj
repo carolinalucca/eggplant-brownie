@@ -15,6 +15,7 @@
 		222EBA402444C8C100C0A9A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222EBA3E2444C8C100C0A9A1 /* Main.storyboard */; };
 		222EBA422444C8C100C0A9A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222EBA412444C8C100C0A9A1 /* Assets.xcassets */; };
 		222EBA452444C8C100C0A9A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222EBA432444C8C100C0A9A1 /* LaunchScreen.storyboard */; };
+		2259C33E2447B53200EF8AAD /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259C33D2447B53200EF8AAD /* RefeicoesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		222EBA412444C8C100C0A9A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222EBA442444C8C100C0A9A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		222EBA462444C8C100C0A9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2259C33D2447B53200EF8AAD /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 		228577EA244505CD00458AC1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "../../../../../Library/Autosave Information/MyPlayground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				222EBA3C2444C8C100C0A9A1 /* ViewController.swift */,
+				2259C33D2447B53200EF8AAD /* RefeicoesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				222E09C124462560009DF72D /* Item.swift in Sources */,
 				222EBA3D2444C8C100C0A9A1 /* ViewController.swift in Sources */,
 				222EBA392444C8C100C0A9A1 /* AppDelegate.swift in Sources */,
+				2259C33E2447B53200EF8AAD /* RefeicoesTableViewController.swift in Sources */,
 				222EBA3B2444C8C100C0A9A1 /* SceneDelegate.swift in Sources */,
 				222E09BF2446251A009DF72D /* Refeicao.swift in Sources */,
 			);
