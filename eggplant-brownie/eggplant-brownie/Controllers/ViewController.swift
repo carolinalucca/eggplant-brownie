@@ -17,7 +17,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - Atributos
     
     var delegate: AdicionaRefeicaoDelegate?
-    var itens: [String] = ["Molho de tomate", "Queijo", "Molho apimentado", "Manjericão"]
+    var itens: [Item] = [Item(nome: "Molho de tomate", calorias: 40),
+                         Item(nome: "Queijo", calorias: 40),
+                         Item(nome: "Molho apimentado", calorias: 40),
+                         Item(nome: "Manjericão", calorias: 40)]
+    var itensSelecionados: [Item] = []
     
     // MARK: - IBOutlets
     
@@ -36,7 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let linhaDaTabela = indexPath.row
         let item = itens[linhaDaTabela]
         
-        celula.textLabel?.text = item
+        celula.textLabel?.text = item.nome
         
         return celula
     }
@@ -45,11 +49,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let celula = tableView.cellForRow(at: indexPath) else { return }
+        let item = itens[indexPath.row]
         
         if (celula.accessoryType == .none) {
             celula.accessoryType = .checkmark
+            
+            itensSelecionados.append(item)
+            
         } else {
             celula.accessoryType = .none
+            
+            if let position = itensSelecionados.firstIndex(of: item) {
+                itensSelecionados.remove(at: position)
+            }
+            
         }
 
     }
@@ -80,7 +93,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
         }
 
-        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
+        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
+        
         print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
         
         delegate?.add(refeicao)
