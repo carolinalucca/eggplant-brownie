@@ -10,10 +10,13 @@ import UIKit
 
 class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
     
+    // MARK: - Atributos
+    
     var refeicoes = [Refeicao(nome: "Strogonoff", felicidade: 4),
                      Refeicao(nome: "Pizza", felicidade: 4),
                      Refeicao(nome: "Sorvete", felicidade: 5)]
     
+    // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return refeicoes.count
@@ -27,6 +30,8 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         return celula
     }
     
+    // MARK: - Prepare
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "adicionar") {
             if let viewController = segue.destination as? ViewController {
@@ -34,6 +39,8 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             }
         }
     }
+    
+    // MARK: - Funções
     
     func add(_ refeicao: Refeicao) {
         refeicoes.append(refeicao)
