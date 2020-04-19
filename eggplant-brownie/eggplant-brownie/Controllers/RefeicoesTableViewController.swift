@@ -18,10 +18,12 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     
     // MARK: - UITableViewDataSource
     
+    // Numero de linhas de uma tabela - numberOfRows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return refeicoes.count
     }
     
+    // Conteúdo de cada linha de uma tabela - cellForRow
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
@@ -52,10 +54,22 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     
     @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer) {
         if gesture.state == .began {
+            
+            // Pega refeiçao pressionada
             let celula = gesture.view as! UITableViewCell
             guard let indexPath = tableView.indexPath(for: celula) else { return }
             let refeicao = refeicoes[indexPath.row]
-            print(refeicao.nome)
+            
+            // Criaçao da caixa de alerta com os detalhes da refeiçao
+            let alerta = UIAlertController(title: refeicao.nome, message: "Felicidade: \(refeicao.felicidade)", preferredStyle: .alert)
+            let botaoCancelar = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+            
+            // Adiciona o botao cancelar à caixa de alerta
+            alerta.addAction(botaoCancelar)
+            
+            // Exibe a caixa de alerta ao pressionar uma refeiçao
+            present(alerta, animated: true, completion: nil)
+            
         }
     }
     
