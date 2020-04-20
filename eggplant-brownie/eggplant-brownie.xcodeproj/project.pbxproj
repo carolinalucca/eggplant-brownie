@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220B8B06244E47FE00365793 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B8B05244E47FE00365793 /* Alerta.swift */; };
 		222E09BF2446251A009DF72D /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E09BE2446251A009DF72D /* Refeicao.swift */; };
 		222E09C124462560009DF72D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E09C024462560009DF72D /* Item.swift */; };
 		222EBA392444C8C100C0A9A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EBA382444C8C100C0A9A1 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220B8B05244E47FE00365793 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		222E09BE2446251A009DF72D /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		222E09C024462560009DF72D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		222EBA352444C8C100C0A9A1 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,7 @@
 			children = (
 				222E09C024462560009DF72D /* Item.swift */,
 				222E09BE2446251A009DF72D /* Refeicao.swift */,
+				220B8B05244E47FE00365793 /* Alerta.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				220B8B06244E47FE00365793 /* Alerta.swift in Sources */,
 				222E09C124462560009DF72D /* Item.swift in Sources */,
 				222EBA3D2444C8C100C0A9A1 /* ViewController.swift in Sources */,
 				22A54BEA24492C3400F38F48 /* AdicionarItensViewController.swift in Sources */,
