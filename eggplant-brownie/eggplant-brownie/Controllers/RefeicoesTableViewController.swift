@@ -60,16 +60,11 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             guard let indexPath = tableView.indexPath(for: celula) else { return }
             let refeicao = refeicoes[indexPath.row]
             
-            // Criaçao da caixa de alerta com os detalhes da refeiçao
-            let alerta = UIAlertController(title: refeicao.nome, message: refeicao.detalhes(), preferredStyle: .alert)
-            let botaoCancelar = UIAlertAction(title: "ok", style: .cancel, handler: nil)
-            
-            // Adiciona o botao cancelar à caixa de alerta
-            alerta.addAction(botaoCancelar)
-            
-            // Exibe a caixa de alerta ao pressionar uma refeiçao
-            present(alerta, animated: true, completion: nil)
-            
+            RemoveRefeicaoViewController(controller: self).exibe(refeicao,
+                handler: { alerta in
+                            self.refeicoes.remove(at: indexPath.row)
+                            self.tableView.reloadData()
+                        })
         }
     }
     
