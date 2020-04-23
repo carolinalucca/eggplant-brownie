@@ -16,6 +16,28 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
                      Refeicao(nome: "Pizza", felicidade: 4),
                      Refeicao(nome: "Sorvete", felicidade: 5)]
     
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        
+        guard let caminho = recuperarDiretorio() else { return }
+        
+        do {
+            let dados = try Data(contentsOf: caminho)
+            let refeicoesSalvas = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as! Array<Refeicao>
+            refeicoes = refeicoesSalvas
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func recuperarDiretorio() -> URL? {
+       guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+       let caminho = diretorio.appendingPathComponent("refeicao")
+       
+       return caminho
+   }
+    
     // MARK: - UITableViewDataSource
     
     // Numero de linhas de uma tabela - numberOfRows
@@ -50,6 +72,16 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     func add(_ refeicao: Refeicao) {
         refeicoes.append(refeicao)
         tableView.reloadData()
+        
+        guard let caminho = recuperarDiretorio() else { return }
+        
+        do {
+            let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
+            try dados.write(to: caminho)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
     }
     
     @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer) {
