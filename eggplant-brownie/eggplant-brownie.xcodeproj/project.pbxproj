@@ -17,6 +17,8 @@
 		222EBA422444C8C100C0A9A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222EBA412444C8C100C0A9A1 /* Assets.xcassets */; };
 		222EBA452444C8C100C0A9A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222EBA432444C8C100C0A9A1 /* LaunchScreen.storyboard */; };
 		2246436A2451E66900C50481 /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224643692451E66900C50481 /* RemoveRefeicaoViewController.swift */; };
+		2246436D2451FF8300C50481 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246436C2451FF8300C50481 /* RefeicaoDao.swift */; };
+		2246436F2452061E00C50481 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246436E2452061E00C50481 /* ItemDao.swift */; };
 		2259C33E2447B53200EF8AAD /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259C33D2447B53200EF8AAD /* RefeicoesTableViewController.swift */; };
 		22A54BEA24492C3400F38F48 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A54BE824492C3400F38F48 /* AdicionarItensViewController.swift */; };
 		22A54BEB24492C3400F38F48 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A54BE924492C3400F38F48 /* AdicionarItensViewController.xib */; };
@@ -35,6 +37,8 @@
 		222EBA442444C8C100C0A9A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		222EBA462444C8C100C0A9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224643692451E66900C50481 /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
+		2246436C2451FF8300C50481 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
+		2246436E2452061E00C50481 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		2259C33D2447B53200EF8AAD /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 		228577EA244505CD00458AC1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = "../../../../../Library/Autosave Information/MyPlayground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		22A54BE824492C3400F38F48 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
@@ -106,12 +110,22 @@
 				222E09C324462672009DF72D /* Models */,
 				222E09C5244626BF009DF72D /* Views */,
 				222E09C42446269D009DF72D /* Controllers */,
+				2246436B2451FF6B00C50481 /* Dao */,
 				222EBA412444C8C100C0A9A1 /* Assets.xcassets */,
 				228577EA244505CD00458AC1 /* MyPlayground.playground */,
 				222EBA432444C8C100C0A9A1 /* LaunchScreen.storyboard */,
 				222EBA462444C8C100C0A9A1 /* Info.plist */,
 			);
 			path = "eggplant-brownie";
+			sourceTree = "<group>";
+		};
+		2246436B2451FF6B00C50481 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				2246436C2451FF8300C50481 /* RefeicaoDao.swift */,
+				2246436E2452061E00C50481 /* ItemDao.swift */,
+			);
+			path = Dao;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,8 @@
 				222E09C124462560009DF72D /* Item.swift in Sources */,
 				222EBA3D2444C8C100C0A9A1 /* ViewController.swift in Sources */,
 				2246436A2451E66900C50481 /* RemoveRefeicaoViewController.swift in Sources */,
+				2246436F2452061E00C50481 /* ItemDao.swift in Sources */,
+				2246436D2451FF8300C50481 /* RefeicaoDao.swift in Sources */,
 				22A54BEA24492C3400F38F48 /* AdicionarItensViewController.swift in Sources */,
 				222EBA392444C8C100C0A9A1 /* AppDelegate.swift in Sources */,
 				2259C33E2447B53200EF8AAD /* RefeicoesTableViewController.swift in Sources */,
